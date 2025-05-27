@@ -11,6 +11,7 @@
     --medium-grey-text: #6c757d;
     --section-grey-bg: #f2f2f2;
     --footer-text-light-grey: #a0a8b1;
+    --num-slides: 10;
 }
 
 body {
@@ -293,11 +294,15 @@ i.ti-mobile, i.fas.fa-mobile, i.fas.fa-envelope, i.ti-email {
 }
 
 .banner-content .btn-primary:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08); */
     background-color: var(--light-text-color); 
     color: var(--primary-brand-blue);
     border: 1px solid var(--primary-brand-blue);
     transition: all 0.3s ease-in-out;
     cursor: pointer; 
+    text-decoration: none;
 }
 
 /* Banner Contact Form (Right Column) */
@@ -338,12 +343,19 @@ i.ti-mobile, i.fas.fa-mobile, i.fas.fa-envelope, i.ti-email {
 }
 
 .banner-contact-form .btn-block:hover {
-    background-color: var(--light-text-color);
-    color: var(--primary-brand-blue);
-    padding: 12px 20px;
+    transform: translateY(-1px); 
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+    background-color: var(--primary-brand-blue);
+    border-color: var(--primary-brand-blue);
+
+    box-shadow: 0 5px 15px rgba(77, 175, 246, 0.3);
+    /* text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08); */
+    /* background-color: var(--light-text-color); */
+    /* color: var(--primary-brand-blue); */
+    padding: 10px 18px;
     border-radius: 30px;
     border: 1px solid var(--primary-brand-blue); 
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 600;
     width: 100%;
     transition: all 0.3s ease-in-out;
@@ -583,9 +595,8 @@ i {
 
 /* The track that holds all the slides */
 .slide-track {
-    animation: scroll 40s linear infinite; 
     display: flex;
-    width: calc(200px * 14); 
+    width: calc(200px * var(--num-slides));
 }
 
 /* Each individual logo slide */
@@ -601,16 +612,12 @@ i {
 
 .slider .slide img {
     height: 80px; 
-    max-width: 150px; 
+    max-width: 80%;
     object-fit: contain; 
     filter: none;
     opacity: 1;
     transition: all 0.3s ease-in-out;
     cursor: default;
-}
-
-.slick-dots {
-    display: none !important; 
 }
 
 /* Animation for the scrolling effect */
@@ -892,7 +899,7 @@ i {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     body {
         padding: 20px; 
     }
@@ -908,4 +915,12 @@ i {
     .button {
         width: 100%; 
     }
+    .row {
+        gap: 30px;
+    }
+    .col-lg-8.justify-content-end {
+        margin-left: 0px; 
+    }
+
+
 }
