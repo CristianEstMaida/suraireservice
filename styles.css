@@ -453,6 +453,30 @@ i.ti-mobile, i.fas.fa-mobile, i.fas.fa-envelope, i.ti-email {
     font-size: 24px;
 }
 
+.masonry {
+    column-count: 2; 
+    column-gap: 15px;
+}
+
+.masonry a {
+    display: block;
+    break-inside: avoid;
+    margin-bottom: 15px;
+}
+
+.masonry img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+img {
+    border-radius: 5px;
+}
+
+
+
 .lightbox {
     position: fixed;
     top: 5500px;
@@ -508,7 +532,7 @@ i {
 
 
 #services-2 { 
-    background: linear-gradient(to right,var(--primary-brand-blue), var(--secondary-gradient-green)); 
+    background: linear-gradient(to top right,#6F88E6, #37BE92); 
     color: var(--light-text-color);
     padding: 60px 0; 
     text-align: center;
@@ -921,6 +945,4 @@ i {
     .col-lg-8.justify-content-end {
         margin-left: 0px; 
     }
-
-
 }
